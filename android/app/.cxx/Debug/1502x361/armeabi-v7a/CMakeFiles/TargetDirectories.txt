@@ -1,0 +1,2 @@
+D:/Nuansauai/project/lariskas/android/app/.cxx/Debug/1502x361/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/Nuansauai/project/lariskas/android/app/.cxx/Debug/1502x361/armeabi-v7a/CMakeFiles/rebuild_cache.dir
