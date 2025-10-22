@@ -199,8 +199,8 @@ class _HomeState extends State<Home> {
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
                 colors: [
-                  Color(0xFF344CB7), // Warna atas
-                  Color(0xFF172251), // Warna bawah
+                  secondaryColor, // Warna atas
+                  primaryColor, // Warna bawah
                 ],
               ),
             ),
@@ -264,7 +264,7 @@ class _HomeState extends State<Home> {
                                           userProvider.serialNumberData?.name
                                                   .isEmpty ==
                                               true)
-                                      ? '-'
+                                      ? 'Coming soon\n in Pro version'
                                       : userProvider.serialNumberData!.name,
                                   style: const TextStyle(
                                     color: Colors.white,
@@ -278,7 +278,7 @@ class _HomeState extends State<Home> {
                                           userProvider.serialNumberData?.email
                                                   .isEmpty ==
                                               true)
-                                      ? '-'
+                                      ? 'Coming soon in Pro version'
                                       : userProvider.serialNumberData!.email,
                                   style: TextStyle(
                                     color: Colors.grey[300],
@@ -431,43 +431,43 @@ class _HomeState extends State<Home> {
                               },
                             ),
 
-                            if (cashierProvider.cashierData?['cashierName'] ==
-                                "Owner")
-                              SidebarListTile(
-                                icon: Icons.shield_outlined,
-                                title: 'Keamanan',
-                                iconColor: Colors.white,
-                                onTap: () {
-                                  showPinModalWithAnimation(
-                                    context,
-                                    pinModal: PinModal(
-                                      destination: SecuritySettingsPage(),
-                                    ),
-                                  );
-                                },
-                              ),
-                            SidebarListTile(
-                              icon: Icons.password_outlined,
-                              title: 'Ganti Password',
-                              iconColor: Colors.white,
-                              onTap: () {
-                                if (securityProvider.kunciGantiPassword) {
-                                  showPinModalWithAnimation(
-                                    context,
-                                    pinModal: PinModal(
-                                      destination: ChangepasswordPage(),
-                                    ),
-                                  );
-                                } else {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            ChangepasswordPage()),
-                                  );
-                                }
-                              },
-                            )
+                            // if (cashierProvider.cashierData?['cashierName'] ==
+                            //     "Owner")
+                              // SidebarListTile(
+                              //   icon: Icons.shield_outlined,
+                              //   title: 'Keamanan',
+                              //   iconColor: Colors.white,
+                              //   onTap: () {
+                              //     showPinModalWithAnimation(
+                              //       context,
+                              //       pinModal: PinModal(
+                              //         destination: SecuritySettingsPage(),
+                              //       ),
+                              //     );
+                              //   },
+                              // ),
+                            // SidebarListTile(
+                            //   icon: Icons.password_outlined,
+                            //   title: 'Ganti Password',
+                            //   iconColor: Colors.white,
+                            //   onTap: () {
+                            //     if (securityProvider.kunciGantiPassword) {
+                            //       showPinModalWithAnimation(
+                            //         context,
+                            //         pinModal: PinModal(
+                            //           destination: ChangepasswordPage(),
+                            //         ),
+                            //       );
+                            //     } else {
+                            //       Navigator.push(
+                            //         context,
+                            //         MaterialPageRoute(
+                            //             builder: (context) =>
+                            //                 ChangepasswordPage()),
+                            //       );
+                            //     }
+                            //   },
+                            // )
                           ],
                         ),
                       ),
@@ -619,7 +619,7 @@ class _HomeState extends State<Home> {
                                                               .getSettingName
                                                               ?.isEmpty ??
                                                           true)
-                                                      ? 'Nama Toko'
+                                                      ? 'Lariskas Store'
                                                       : (settingProvider
                                                                   .getSettingName!
                                                                   .replaceAll(
@@ -641,7 +641,7 @@ class _HomeState extends State<Home> {
                                                               .getSettingAddress
                                                               ?.isEmpty ??
                                                           true)
-                                                      ? 'Alamat Toko'
+                                                      ? 'Lariskas Lite'
                                                       : (settingProvider
                                                                   .getSettingAddress!
                                                                   .replaceAll(
@@ -866,7 +866,7 @@ class _HomeState extends State<Home> {
                                         imagePath: 'assets/images/product.png',
                                       ),
                                     ),
-                                    const Gap(10),
+                                    // const Gap(10),
                                     // Expanded(
                                     //   child: MainCard(
                                     //     onTap: () {
@@ -935,7 +935,7 @@ class _HomeState extends State<Home> {
                                     //     imagePath: 'assets/images/add.png',
                                     //   ),
                                     // ),
-                                    const Gap(10),
+                                    // const Gap(10),
                                     Expanded(
                                       child: MainCard(
                                         onTap: () {

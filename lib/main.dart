@@ -104,7 +104,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       scaffoldMessengerKey: scaffoldMessengerKey,
-      home: Home(),
+      home: SplashScreen(),
     );
   }
 }

@@ -32,17 +32,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    _navigateToHome();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) {
-        _requestPermissions();
-        _checkTokenSplashScreen();
-        if (!_hasAttemptedReconnect) {
-          _autoReconnectBluetooth();
-        }
-        // _checkInternetConnection();
-      }
-    });
+    // WidgetsBinding.instance.addPostFrameCallback((_) {
+    //   if (mounted) {
+    //     _requestPermissions();
+    //     _checkTokenSplashScreen();
+    //     if (!_hasAttemptedReconnect) {
+    //       _autoReconnectBluetooth();
+    //     }
+    //     // _checkInternetConnection();
+    //   }
+    // });
 
     // _autoReconnectBluetooth();
     // _checkInternetConnection();
@@ -90,31 +91,31 @@ class _SplashScreenState extends State<SplashScreen> {
   //   }
   // }
 
-  void _checkTokenSplashScreen() async {
-    try {
-      final token = await _authService.getToken();
-      if (token != null && !_authService.isTokenExpired(context, token)) {
-        print("Navigating to Home");
-        _navigateToHome();
-      } else {
-        print("Navigating to Login");
-        _navigateToLogin();
-      }
-    } catch (e) {
-      print("Error checking token: $e");
-      _navigateToLogin(); // Fallback ke halaman login
-    }
-  }
+  // void _checkTokenSplashScreen() async {
+  //   try {
+  //     final token = await _authService.getToken();
+  //     if (token != null && !_authService.isTokenExpired(context, token)) {
+  //       print("Navigating to Home");
+  //       _navigateToHome();
+  //     } else {
+  //       print("Navigating to Login");
+  //       _navigateToLogin();
+  //     }
+  //   } catch (e) {
+  //     print("Error checking token: $e");
+  //     _navigateToLogin(); // Fallback ke halaman login
+  //   }
+  // }
 
-  void _navigateToLogin() {
-    Future.delayed(Duration(seconds: 1), () {
-      // Pastikan widget masih terpasang
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
-      );
-    });
-  }
+  // void _navigateToLogin() {
+  //   Future.delayed(Duration(seconds: 1), () {
+  //     // Pastikan widget masih terpasang
+  //     Navigator.pushReplacement(
+  //       context,
+  //       MaterialPageRoute(builder: (context) => LoginPage()),
+  //     );
+  //   });
+  // }
 
   void _navigateToHome() {
     Future.delayed(Duration(seconds: 1), () {
