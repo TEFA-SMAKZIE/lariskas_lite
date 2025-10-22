@@ -131,11 +131,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
     serialNumberController = TextEditingController(
         text: userProvider.serialNumberData?.serialNumber ?? '');
     nameController =
-        TextEditingController(text: userProvider.serialNumberData?.name ?? '-');
+        TextEditingController(text: userProvider.serialNumberData?.name ?? 'Coming soon in Pro version');
     emailController = TextEditingController(
-        text: userProvider.serialNumberData?.email ?? '-');
+        text: userProvider.serialNumberData?.email ?? 'Coming soon in Pro version');
     phoneNumberController = TextEditingController(
-        text: userProvider.serialNumberData?.phoneNumber ?? "-");
+        text: userProvider.serialNumberData?.phoneNumber ?? "Coming soon in Pro version");
     userProfileFromApi = userProvider.serialNumberData?.profileImage;
     userProfileFromApiBackup = userProvider.serialNumberData?.profileImage;
 
@@ -320,18 +320,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       hintText: "Nama",
                       icon: FontAwesomeIcons.user,
                       controller: nameController,
+                      enabled: false,
                     ),
                     CustomTextField(
                       fillColor: Colors.grey[200],
                       hintText: "Email",
                       icon: FontAwesomeIcons.envelope,
                       controller: emailController,
+                      enabled: false,
                     ),
                     CustomTextField(
                       fillColor: Colors.grey[200],
                       hintText: "No Telepon",
                       icon: FontAwesomeIcons.phone,
                       controller: phoneNumberController,
+                      enabled: false,
                     ),
                   ],
                 ),
@@ -345,22 +348,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: ExpensiveFloatingButton(
           isPositioned: true,
           onPressed: () async {
-            File imageFile;
-            if (isNoImage == true || image == null) {
-              imageFile = await getAssetAsFile(noImage);
-            } else if (image != null) {
-              imageFile = image!;
-            } else {
-              print("Error: Image is null");
-              return;
-            }
-            userService.updateSerialNumberDetails(
-              context,
-              nameController.text,
-              emailController.text,
-              phoneNumberController.text,
-              imageFile,
-            );
+            // File imageFile;
+            // if (isNoImage == true || image == null) {
+            //   imageFile = await getAssetAsFile(noImage);
+            // } else if (image != null) {
+            //   imageFile = image!;
+            // } else {
+            //   print("Error: Image is null");
+            //   return;
+            // }
+            // userService.updateSerialNumberDetails(
+            //   context,
+            //   nameController.text,
+            //   emailController.text,
+            //   phoneNumberController.text,
+            //   imageFile,
+            // );
           },
           text: "SIMPAN",
         ),

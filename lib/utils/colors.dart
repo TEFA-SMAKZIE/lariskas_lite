@@ -25,8 +25,8 @@ const Color gradientSec = Color(0xff1F7CAA);
 const Color textColor = Color.fromARGB(255, 0, 0, 0);
 
 // Dark Blue Version
-const Color primaryColor = Color(0xff000957);
-const Color secondaryColor= Color(0xff344CB7);
+const Color primaryColor = Color(0xFF0E5E86);
+const Color secondaryColor= Color(0xFF71D0FF);
 const Color blueColor= Color(0xff939FD6);
 
 

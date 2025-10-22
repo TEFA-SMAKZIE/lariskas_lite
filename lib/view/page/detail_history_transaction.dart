@@ -452,7 +452,7 @@ class _DetailHistoryTransactionState extends State<DetailHistoryTransaction> {
                           }
                         },
                         child: Container(
-                          width: 120,
+                          width: 110,
                           height: 50,
                           decoration: BoxDecoration(
                               color: primaryColor,
@@ -507,7 +507,7 @@ class _DetailHistoryTransactionState extends State<DetailHistoryTransaction> {
                           }
                         },
                         child: Container(
-                          width: 120,
+                          width: 110,
                           height: 50,
                           decoration: BoxDecoration(
                               color: primaryColor,
@@ -541,7 +541,7 @@ class _DetailHistoryTransactionState extends State<DetailHistoryTransaction> {
                                       )));
                         },
                         child: Container(
-                          width: 120,
+                          width: 110,
                           height: 50,
                           decoration: BoxDecoration(
                               color: primaryColor,

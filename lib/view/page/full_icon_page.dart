@@ -111,21 +111,21 @@ class _AllIconPageState extends State<AllIconPage> {
                     );
                   }
                 }),
-                _buildMainCard("Laporan", 'assets/images/report.png', () {
-                  if (securityProvider.kunciLaporan) {
-                    showPinModalWithAnimation(
-                      context,
-                      pinModal: PinModal(
-                        destination: ReportPage(),
-                      ),
-                    );
-                  } else {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ReportPage()),
-                    );
-                  }
-                }),
+                // _buildMainCard("Laporan", 'assets/images/report.png', () {
+                //   if (securityProvider.kunciLaporan) {
+                //     showPinModalWithAnimation(
+                //       context,
+                //       pinModal: PinModal(
+                //         destination: ReportPage(),
+                //       ),
+                //     );
+                //   } else {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(builder: (context) => ReportPage()),
+                //     );
+                //   }
+                // }),
                 _buildMainCard("Pemasukan", 'assets/images/income.png', () {
                   if (securityProvider.kunciPemasukan) {
                     showPinModalWithAnimation(
@@ -150,13 +150,13 @@ class _AllIconPageState extends State<AllIconPage> {
                     MaterialPageRoute(builder: (_) => const ProductPage()),
                   );
                 }),
-                _buildMainCard("Tambah Stok", 'assets/images/add.png', () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (_) => const AddStockProductPage()),
-                  );
-                }),
+                // _buildMainCard("Tambah Stok", 'assets/images/add.png', () {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (_) => const AddStockProductPage()),
+                //   );
+                // }),
               ]),
               Gap(2.h),
               _buildSection("Pengaturan", [
@@ -176,31 +176,31 @@ class _AllIconPageState extends State<AllIconPage> {
                   }
                 }),
                 if (cashierProvider.cashierData?['cashierName'] == "Owner")
-                  _buildMainCard("Keamanan", 'assets/images/keamanan.png', () {
-                    showPinModalWithAnimation(
-                      context,
-                      pinModal: PinModal(
-                        destination: SecuritySettingsPage(),
-                      ),
-                    );
-                  }),
-                _buildMainCard("Ganti Password", 'assets/images/Password.png',
-                    () {
-                  if (securityProvider.kunciGantiPassword) {
-                    showPinModalWithAnimation(
-                      context,
-                      pinModal: PinModal(
-                        destination: ChangepasswordPage(),
-                      ),
-                    );
-                  } else {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => ChangepasswordPage()),
-                    );
-                  }
-                }),
+                  // _buildMainCard("Keamanan", 'assets/images/keamanan.png', () {
+                  //   showPinModalWithAnimation(
+                  //     context,
+                  //     pinModal: PinModal(
+                  //       destination: SecuritySettingsPage(),
+                  //     ),
+                  //   );
+                  // }),
+                // _buildMainCard("Ganti Password", 'assets/images/Password.png',
+                //     () {
+                //   if (securityProvider.kunciGantiPassword) {
+                //     showPinModalWithAnimation(
+                //       context,
+                //       pinModal: PinModal(
+                //         destination: ChangepasswordPage(),
+                //       ),
+                //     );
+                //   } else {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(
+                //           builder: (context) => ChangepasswordPage()),
+                //     );
+                //   }
+                // }),
                 _buildMainCard(
                     "Koneksi Bluetooth", 'assets/images/Bluetooth.png', () {
                   Navigator.push(
