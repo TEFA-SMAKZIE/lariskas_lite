@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/transaction.dart';
+import 'package:kas_mini_lite/model/transaction.dart';
 
 class CardReportTransactions extends StatelessWidget {
   const CardReportTransactions({

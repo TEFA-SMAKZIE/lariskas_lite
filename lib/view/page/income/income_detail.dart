@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/income.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/formatters.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/widget/Income_card.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
+import 'package:kas_mini_lite/model/income.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/formatters.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/widget/Income_card.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/custom_textfield.dart';
 
 class IncomeDetailPage extends StatefulWidget {
   final Income? income;

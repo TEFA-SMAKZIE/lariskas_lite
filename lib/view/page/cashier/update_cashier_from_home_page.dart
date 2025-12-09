@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/model/cashier.dart';
-import 'package:kas_mini_flutter_app/model/cashierImageProfile.dart';
-import 'package:kas_mini_flutter_app/providers/cashierProvider.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/null_data_alert.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/utils/successAlert.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveFloatingButton.dart';
-import 'package:kas_mini_flutter_app/view/widget/pin_input.dart';
+import 'package:kas_mini_lite/model/cashier.dart';
+import 'package:kas_mini_lite/model/cashierImageProfile.dart';
+import 'package:kas_mini_lite/providers/cashierProvider.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/null_data_alert.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/utils/successAlert.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/custom_textfield.dart';
+import 'package:kas_mini_lite/view/widget/expensiveFloatingButton.dart';
+import 'package:kas_mini_lite/view/widget/pin_input.dart';
 import 'package:provider/provider.dart';
 
 class UpdateCashierFromHome extends StatefulWidget {

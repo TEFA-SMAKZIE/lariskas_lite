@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/view/widget/Notfound.dart';
-import 'package:kas_mini_flutter_app/view/widget/app_bar_stock.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveFloatingButton.dart';
-import 'package:kas_mini_flutter_app/view/widget/select_product_stock.dart'; // Import halaman baru
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/view/widget/Notfound.dart';
+import 'package:kas_mini_lite/view/widget/app_bar_stock.dart';
+import 'package:kas_mini_lite/view/widget/expensiveFloatingButton.dart';
+import 'package:kas_mini_lite/view/widget/select_product_stock.dart'; // Import halaman baru
 
 class SelectProduct extends StatefulWidget {
   final List<Product>? selectedProductStock;

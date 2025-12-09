@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:kas_mini_flutter_app/model/transaction.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/view/widget/formatter/Rupiah.dart';
+import 'package:kas_mini_lite/model/transaction.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/view/widget/formatter/Rupiah.dart';
 
 class RiwayatTransaksi_list extends StatefulWidget {
 const RiwayatTransaksi_list({super.key});

@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/providers/cashierProvider.dart';
-import 'package:kas_mini_flutter_app/providers/securityProvider.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/pinModalWithAnimation.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/page/History_transaksi.dart';
-import 'package:kas_mini_flutter_app/view/page/addStockProduct/add_stock_product.dart';
-import 'package:kas_mini_flutter_app/view/page/cashier/cashier_page.dart';
-import 'package:kas_mini_flutter_app/view/page/change_password/changePassword.dart';
-import 'package:kas_mini_flutter_app/view/page/expense/expense_page.dart';
-import 'package:kas_mini_flutter_app/view/page/income/income_page.dart';
-import 'package:kas_mini_flutter_app/view/page/print_resi/input_resi.dart';
-import 'package:kas_mini_flutter_app/view/page/product/product.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_page.dart';
-import 'package:kas_mini_flutter_app/view/page/settings/scanDevicePrinter.dart';
-import 'package:kas_mini_flutter_app/view/page/settings/securityPage.dart';
-import 'package:kas_mini_flutter_app/view/page/settings/setting.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/menu_card.dart';
-import 'package:kas_mini_flutter_app/view/widget/pinModal.dart';
+import 'package:kas_mini_lite/providers/cashierProvider.dart';
+import 'package:kas_mini_lite/providers/securityProvider.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/pinModalWithAnimation.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/page/History_transaksi.dart';
+import 'package:kas_mini_lite/view/page/addStockProduct/add_stock_product.dart';
+import 'package:kas_mini_lite/view/page/cashier/cashier_page.dart';
+import 'package:kas_mini_lite/view/page/change_password/changePassword.dart';
+import 'package:kas_mini_lite/view/page/expense/expense_page.dart';
+import 'package:kas_mini_lite/view/page/income/income_page.dart';
+import 'package:kas_mini_lite/view/page/print_resi/input_resi.dart';
+import 'package:kas_mini_lite/view/page/product/product.dart';
+import 'package:kas_mini_lite/view/page/report/report_page.dart';
+import 'package:kas_mini_lite/view/page/settings/scanDevicePrinter.dart';
+import 'package:kas_mini_lite/view/page/settings/securityPage.dart';
+import 'package:kas_mini_lite/view/page/settings/setting.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/menu_card.dart';
+import 'package:kas_mini_lite/view/widget/pinModal.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -111,21 +111,21 @@ class _AllIconPageState extends State<AllIconPage> {
                     );
                   }
                 }),
-                // _buildMainCard("Laporan", 'assets/images/report.png', () {
-                //   if (securityProvider.kunciLaporan) {
-                //     showPinModalWithAnimation(
-                //       context,
-                //       pinModal: PinModal(
-                //         destination: ReportPage(),
-                //       ),
-                //     );
-                //   } else {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(builder: (context) => ReportPage()),
-                //     );
-                //   }
-                // }),
+                _buildMainCard("Laporan", 'assets/images/report.png', () {
+                  if (securityProvider.kunciLaporan) {
+                    showPinModalWithAnimation(
+                      context,
+                      pinModal: PinModal(
+                        destination: ReportPage(),
+                      ),
+                    );
+                  } else {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ReportPage()),
+                    );
+                  }
+                }),
                 _buildMainCard("Pemasukan", 'assets/images/income.png', () {
                   if (securityProvider.kunciPemasukan) {
                     showPinModalWithAnimation(
@@ -176,31 +176,31 @@ class _AllIconPageState extends State<AllIconPage> {
                   }
                 }),
                 if (cashierProvider.cashierData?['cashierName'] == "Owner")
-                  // _buildMainCard("Keamanan", 'assets/images/keamanan.png', () {
-                  //   showPinModalWithAnimation(
-                  //     context,
-                  //     pinModal: PinModal(
-                  //       destination: SecuritySettingsPage(),
-                  //     ),
-                  //   );
-                  // }),
-                // _buildMainCard("Ganti Password", 'assets/images/Password.png',
-                //     () {
-                //   if (securityProvider.kunciGantiPassword) {
-                //     showPinModalWithAnimation(
-                //       context,
-                //       pinModal: PinModal(
-                //         destination: ChangepasswordPage(),
-                //       ),
-                //     );
-                //   } else {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //           builder: (context) => ChangepasswordPage()),
-                //     );
-                //   }
-                // }),
+                  _buildMainCard("Keamanan", 'assets/images/keamanan.png', () {
+                    showPinModalWithAnimation(
+                      context,
+                      pinModal: PinModal(
+                        destination: SecuritySettingsPage(),
+                      ),
+                    );
+                  }),
+                _buildMainCard("Ganti Password", 'assets/images/Password.png',
+                    () {
+                  if (securityProvider.kunciGantiPassword) {
+                    showPinModalWithAnimation(
+                      context,
+                      pinModal: PinModal(
+                        destination: ChangepasswordPage(),
+                      ),
+                    );
+                  } else {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ChangepasswordPage()),
+                    );
+                  }
+                }),
                 _buildMainCard(
                     "Koneksi Bluetooth", 'assets/images/Bluetooth.png', () {
                   Navigator.push(

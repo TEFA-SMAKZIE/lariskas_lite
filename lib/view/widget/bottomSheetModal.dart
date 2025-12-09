@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveAnimatedButton.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/view/widget/custom_textfield.dart';
+import 'package:kas_mini_lite/view/widget/expensiveAnimatedButton.dart';
 
 Future<dynamic> bottomSheetModal(BuildContext context,
   {String? title, String? hintText, VoidCallback? onPressed, TextEditingController? controller}) {

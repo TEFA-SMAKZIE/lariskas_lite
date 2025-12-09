@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/stock_addition.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/page/addStockProduct/select_and_add_stock.dart';
-import 'package:kas_mini_flutter_app/view/widget/date_from_to/fromTo_v2.dart';
-import 'package:kas_mini_flutter_app/view/widget/refresWidget.dart';
-import 'package:kas_mini_flutter_app/view/widget/stock_addition_card.dart';
+import 'package:kas_mini_lite/model/stock_addition.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/page/addStockProduct/select_and_add_stock.dart';
+import 'package:kas_mini_lite/view/widget/date_from_to/fromTo_v2.dart';
+import 'package:kas_mini_lite/view/widget/refresWidget.dart';
+import 'package:kas_mini_lite/view/widget/stock_addition_card.dart';
 
 class AddStockProductPage extends StatefulWidget {
   const AddStockProductPage({super.key});

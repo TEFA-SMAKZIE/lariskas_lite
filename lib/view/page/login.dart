@@ -3,12 +3,12 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
-import 'package:kas_mini_flutter_app/providers/appVersionProvider.dart';
-import 'package:kas_mini_flutter_app/services/authService.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/toast.dart';
-import 'package:kas_mini_flutter_app/view/page/home/home.dart';
-import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
+import 'package:kas_mini_lite/providers/appVersionProvider.dart';
+import 'package:kas_mini_lite/services/authService.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/toast.dart';
+import 'package:kas_mini_lite/view/page/home/home.dart';
+import 'package:kas_mini_lite/view/widget/custom_textfield.dart';
 import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatelessWidget {

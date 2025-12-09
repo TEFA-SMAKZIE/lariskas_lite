@@ -2,10 +2,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/providers/bluetoothProvider.dart';
-import 'package:kas_mini_flutter_app/utils/modal_animation.dart';
-import 'package:kas_mini_flutter_app/utils/successAlert.dart';
-import 'package:kas_mini_flutter_app/view/page/settings/scanDevicePrinter.dart';
+import 'package:kas_mini_lite/providers/bluetoothProvider.dart';
+import 'package:kas_mini_lite/utils/modal_animation.dart';
+import 'package:kas_mini_lite/utils/successAlert.dart';
+import 'package:kas_mini_lite/view/page/settings/scanDevicePrinter.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 

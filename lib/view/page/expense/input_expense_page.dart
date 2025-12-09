@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/alert.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/alert.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/custom_textfield.dart';
 import 'package:intl/intl.dart';
 
 class InputExpensePage extends StatefulWidget {

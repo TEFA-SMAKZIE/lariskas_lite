@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/providers/securityProvider.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_StokProduct.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_category.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_expense.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_kasir.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_payment_method.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_product.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_profit.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_transaction.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/menu_card.dart';
-import 'package:kas_mini_flutter_app/view/widget/modals.dart';
+import 'package:kas_mini_lite/providers/securityProvider.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/page/report/report_StokProduct.dart';
+import 'package:kas_mini_lite/view/page/report/report_category.dart';
+import 'package:kas_mini_lite/view/page/report/report_expense.dart';
+import 'package:kas_mini_lite/view/page/report/report_kasir.dart';
+import 'package:kas_mini_lite/view/page/report/report_payment_method.dart';
+import 'package:kas_mini_lite/view/page/report/report_product.dart';
+import 'package:kas_mini_lite/view/page/report/report_profit.dart';
+import 'package:kas_mini_lite/view/page/report/report_transaction.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/menu_card.dart';
+import 'package:kas_mini_lite/view/widget/modals.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -80,18 +80,18 @@ class _ReportPageState extends State<ReportPage> {
                       );
                     },
                   ),
-                  _buildMainCard(
-                    title: "Stok Produk",
-                    imagePath: 'assets/images/report_stock_product.png',
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => const ReportStokproduct(),
-                        ),
-                      );
-                    },
-                  ),
+                  // _buildMainCard(
+                  //   title: "Stok Produk",
+                  //   imagePath: 'assets/images/report_stock_product.png',
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (_) => const ReportStokproduct(),
+                  //       ),
+                  //     );
+                  //   },
+                  // ),
                   _buildMainCard(
                     title: "Kategori",
                     imagePath: 'assets/images/report_category.png',

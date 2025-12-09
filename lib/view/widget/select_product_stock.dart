@@ -5,9 +5,9 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
 
 class SelectStockProductCard extends StatefulWidget {
   final bool isSelected;

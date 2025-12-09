@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/providers/bluetoothProvider.dart';
-import 'package:kas_mini_flutter_app/utils/printer_helper.dart';
+import 'package:kas_mini_lite/providers/bluetoothProvider.dart';
+import 'package:kas_mini_lite/utils/printer_helper.dart';
 import 'package:provider/provider.dart';
 
 class PrinterPage extends StatelessWidget {

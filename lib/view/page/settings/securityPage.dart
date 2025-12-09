@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/providers/securityProvider.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/utils/successAlert.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveFloatingButton.dart';
-import 'package:kas_mini_flutter_app/view/widget/pinModal.dart';
-import 'package:kas_mini_flutter_app/view/widget/pinModalChangePassword.dart';
-import 'package:kas_mini_flutter_app/view/widget/primary_button.dart';
+import 'package:kas_mini_lite/providers/securityProvider.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/utils/successAlert.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/expensiveFloatingButton.dart';
+import 'package:kas_mini_lite/view/widget/pinModal.dart';
+import 'package:kas_mini_lite/view/widget/pinModalChangePassword.dart';
+import 'package:kas_mini_lite/view/widget/primary_button.dart';
 
-import 'package:kas_mini_flutter_app/services/sharedPrefences.dart';
+import 'package:kas_mini_lite/services/sharedPrefences.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

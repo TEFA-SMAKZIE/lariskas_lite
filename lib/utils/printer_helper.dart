@@ -6,8 +6,8 @@ import 'package:flutter/services.dart' show ByteData, Uint8List, rootBundle;
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 import 'package:image/image.dart' as img;
-import 'package:kas_mini_flutter_app/model/transaction.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
+import 'package:kas_mini_lite/model/transaction.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PrinterHelper {

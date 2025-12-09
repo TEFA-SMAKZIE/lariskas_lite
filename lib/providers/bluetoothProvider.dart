@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
-import 'package:kas_mini_flutter_app/utils/toast.dart';
+import 'package:kas_mini_lite/utils/toast.dart';
 
 class BluetoothProvider with ChangeNotifier {
   BluetoothDevice? _connectedDevice;

@@ -2,7 +2,7 @@
   
 
     <application
-        android:label="LarisKas - Lite"
+        android:label="LarisKasLite"
         android:name="${applicationName}"
         android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher">

@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/category.dart';
-import 'package:kas_mini_flutter_app/model/receiptTemplate.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/failedAlert.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/utils/search_utils.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/search.dart';
+import 'package:kas_mini_lite/model/category.dart';
+import 'package:kas_mini_lite/model/receiptTemplate.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/failedAlert.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/utils/search_utils.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/search.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
-import 'package:kas_mini_flutter_app/utils/sort.dart';
+import 'package:kas_mini_lite/utils/sort.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class SelectTemplate extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/null_data_alert.dart';
-import 'package:kas_mini_flutter_app/view/widget/pin_input.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/null_data_alert.dart';
+import 'package:kas_mini_lite/view/widget/pin_input.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PinModal extends StatefulWidget {

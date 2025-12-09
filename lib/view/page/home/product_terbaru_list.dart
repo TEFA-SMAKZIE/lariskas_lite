@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/view/widget/Notfound.dart';
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/view/widget/Notfound.dart';
 import 'package:sizer/sizer.dart';
 
 class ProductTerbaruList extends StatefulWidget {

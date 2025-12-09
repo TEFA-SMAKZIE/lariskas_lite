@@ -3,17 +3,17 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/bi.dart';
-import 'package:kas_mini_flutter_app/model/category.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/not_enough_stock_alert.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/page/qr_code_scanner.dart';
-import 'package:kas_mini_flutter_app/view/page/transaction/transactions_page.dart';
-import 'package:kas_mini_flutter_app/view/widget/Notfound.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/card_select_product.dart';
+import 'package:kas_mini_lite/model/category.dart';
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/not_enough_stock_alert.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/page/qr_code_scanner.dart';
+import 'package:kas_mini_lite/view/page/transaction/transactions_page.dart';
+import 'package:kas_mini_lite/view/widget/Notfound.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/card_select_product.dart';
 
 class SelectProductPage extends StatefulWidget {
   final List<Product> selectedProducts;

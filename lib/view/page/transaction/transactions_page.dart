@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/icons/material_symbols.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/null_data_alert.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/page/transaction/checkout_page.dart';
-import 'package:kas_mini_flutter_app/view/page/transaction/select_product_page.dart';
-import 'package:kas_mini_flutter_app/view/widget/antrian.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/card_transaction.dart';
-import 'package:kas_mini_flutter_app/view/widget/floating_button.dart';
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/null_data_alert.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/page/transaction/checkout_page.dart';
+import 'package:kas_mini_lite/view/page/transaction/select_product_page.dart';
+import 'package:kas_mini_lite/view/widget/antrian.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/card_transaction.dart';
+import 'package:kas_mini_lite/view/widget/floating_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class TransactionsPage extends StatelessWidget {

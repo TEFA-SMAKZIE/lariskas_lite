@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
+import 'package:kas_mini_lite/model/product.dart';
 
 class StockCardScreen extends StatefulWidget {
   final Product product;

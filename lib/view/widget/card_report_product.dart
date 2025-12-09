@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/model/transaction.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/model/transaction.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
 
 class CardReportSoldProduct extends StatelessWidget {
   final TransactionData transaction;

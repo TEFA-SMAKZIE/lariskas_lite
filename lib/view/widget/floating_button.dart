@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
 import 'package:sizer/sizer.dart';
 
 class CustomButton extends StatelessWidget {

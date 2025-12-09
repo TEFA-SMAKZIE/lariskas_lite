@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:kas_mini_flutter_app/model/transaction.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/view/widget/custom_card_widget.dart';
+import 'package:kas_mini_lite/model/transaction.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/view/widget/custom_card_widget.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class LineChartCard extends StatelessWidget {
