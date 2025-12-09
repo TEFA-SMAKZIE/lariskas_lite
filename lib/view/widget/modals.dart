@@ -1,31 +1,24 @@
+import 'dart:io';
+
+import 'package:excel/excel.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_lite/model/cashier.dart';
 import 'package:kas_mini_lite/model/expenceModel.dart';
-import 'package:kas_mini_lite/model/expense.dart';
-import 'package:kas_mini_lite/model/paymentMethod.dart';
 import 'package:kas_mini_lite/model/product.dart';
 import 'package:kas_mini_lite/model/report_cashier.dart';
-import 'package:kas_mini_lite/model/report_payment_model.dart';
 import 'package:kas_mini_lite/model/report_sold_product.dart';
 import 'package:kas_mini_lite/model/transaction.dart';
 import 'package:kas_mini_lite/services/database_service.dart';
 import 'package:kas_mini_lite/utils/colors.dart';
 import 'package:kas_mini_lite/utils/failedAlert.dart';
 import 'package:kas_mini_lite/utils/successAlert.dart';
-import 'package:kas_mini_lite/view/page/report/report_payment_method.dart';
 import 'package:kas_mini_lite/view/widget/custom_textfield.dart';
 import 'package:kas_mini_lite/view/widget/dateFrom-To.dart';
 import 'package:kas_mini_lite/view/widget/date_from_to/fromTo_v2.dart';
-import 'package:kas_mini_lite/view/widget/date_from_to/from_to_v3.dart';
-import 'dart:io';
-import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
-import 'package:excel/excel.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:sizer/sizer.dart';
+import 'package:path_provider/path_provider.dart';
 
 // Controller
 TextEditingController fileNameController = TextEditingController();
