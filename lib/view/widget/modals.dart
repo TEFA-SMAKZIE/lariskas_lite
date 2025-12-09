@@ -30,7 +30,7 @@ import 'package:sizer/sizer.dart';
 // Controller
 TextEditingController fileNameController = TextEditingController();
 TextEditingController profitController = TextEditingController();
-TextEditingController statusController = TextEditingController();
+TextEditingController statusController = TextEditingController(text: "Semua");
 TextEditingController dateFromController = TextEditingController();
 TextEditingController dateToController = TextEditingController();
 
@@ -49,7 +49,7 @@ String fileName = fileNameController.text.trim();
 final DatabaseService databaseService = DatabaseService.instance;
 
 class CustomModals {
-  static Future<void> saveExcelFile(String fileName) async {
+  static Future<String?> saveExcelFile(String fileName) async {
     Future<List<TransactionData>> _getTransactionData() async {
       try {
         return await databaseService.getTransaction();
@@ -61,6 +61,7 @@ class CustomModals {
 
     if (fileName.isEmpty) {
       print('Nama file tidak boleh kosong');
+      return null;
     } else {
       // Membuat file Excel
       var excel = Excel.createExcel();
@@ -102,15 +103,20 @@ class CustomModals {
 
       List<int>? fileBytes = excel.save();
       if (fileBytes != null) {
-        // Simpan file ke direktori eksternal
-        final directory = await getExternalStorageDirectory();
-        final filePath = join(directory!.path, '$fileName.xlsx');
+        // Simpan file ke folder Download
+        Directory directory = Directory('/storage/emulated/0/Download');
+        if (!await directory.exists()) {
+          directory = await getExternalStorageDirectory() ?? Directory('/');
+        }
+        final filePath = join(directory.path, '$fileName.xlsx');
         final file = File(filePath);
 
         await file.writeAsBytes(fileBytes);
 
         print('File berhasil disimpan di $filePath');
+        return filePath;
       }
+      return null;
     }
   }
 
@@ -170,9 +176,15 @@ class CustomModals {
                       showFailedAlert(context);
                     } else {
                       clearTextFields();
+                      String? path = await saveExcelFile(fileName);
+                      if (!context.mounted) return;
                       Navigator.pop(context);
-                      showSuccessAlert(context, 'Berhasil');
-                      await saveExcelFile(fileName);
+                      if (path != null) {
+                        showSuccessAlert(context, 'Berhasil disimpan di $path');
+                      } else {
+                        showFailedAlert(context,
+                            message: 'Gagal menyimpan file');
+                      }
                     }
                   },
                   child: Container(
@@ -254,9 +266,16 @@ class CustomModals {
                       showFailedAlert(context);
                     } else {
                       clearTextFields();
+                      String? path = await saveExcelPaymentMethodData(
+                          fileName, paymentData);
+                      if (!context.mounted) return;
                       Navigator.pop(context);
-                      showSuccessAlert(context, 'Berhasil');
-                      await saveExcelPaymentMethodData(fileName, paymentData);
+                      if (path != null) {
+                        showSuccessAlert(context, 'Berhasil disimpan di $path');
+                      } else {
+                        showFailedAlert(context,
+                            message: 'Gagal menyimpan file');
+                      }
                     }
                   },
                   child: Container(
@@ -282,10 +301,11 @@ class CustomModals {
     );
   }
 
-  static Future<void> saveExcelPaymentMethodData(
+  static Future<String?> saveExcelPaymentMethodData(
       String fileName, List<Map<String, dynamic>> paymentData) async {
     if (fileName.isEmpty) {
       print('Nama file tidak boleh kosong');
+      return null;
     } else {
       // Membuat file Excel
       var excel = Excel.createExcel();
@@ -311,23 +331,29 @@ class CustomModals {
 
       List<int>? fileBytes = excel.save();
       if (fileBytes != null) {
-        // Simpan file ke direktori eksternal
-        final directory = await getExternalStorageDirectory();
-        final filePath = join(directory!.path, '$fileName.xlsx');
+        // Simpan file ke folder Download
+        Directory directory = Directory('/storage/emulated/0/Download');
+        if (!await directory.exists()) {
+          directory = await getExternalStorageDirectory() ?? Directory('/');
+        }
+        final filePath = join(directory.path, '$fileName.xlsx');
         final file = File(filePath);
 
         await file.writeAsBytes(fileBytes);
 
         print('File berhasil disimpan di $filePath');
         print('Data $paymentData.');
+        return filePath;
       }
+      return null;
     }
   }
 
-  static Future<void> saveExcelStockProductReport(
+  static Future<String?> saveExcelStockProductReport(
       String fileName, List<Product> productStock) async {
     if (fileName.isEmpty) {
       print('Nama file tidak boleh kosong');
+      return null;
     } else {
       // Membuat file Excel
       var excel = Excel.createExcel();
@@ -366,18 +392,21 @@ class CustomModals {
 
       List<int>? fileBytes = excel.save();
       if (fileBytes != null) {
-        // Simpan file ke direktori eksternal
-        final directory = await getExternalStorageDirectory();
-        final filePath = join(directory!.path, '$fileName.xlsx');
+        // Simpan file ke folder Download
+        Directory directory = Directory('/storage/emulated/0/Download');
+        if (!await directory.exists()) {
+          directory = await getExternalStorageDirectory() ?? Directory('/');
+        }
+        final filePath = join(directory.path, '$fileName.xlsx');
         final file = File(filePath);
 
         await file.writeAsBytes(fileBytes);
 
         print('File berhasil disimpan di $filePath');
         print('Data $productStock.');
-        // Bagikan file menggunakan package Share_plus
-        // await Share.share(filePath);
+        return filePath;
       }
+      return null;
     }
   }
 
@@ -437,9 +466,16 @@ class CustomModals {
                       showFailedAlert(context);
                     } else {
                       clearTextFields();
+                      String? path = await saveExcelStockProductReport(
+                          fileName, productStock);
+                      if (!context.mounted) return;
                       Navigator.pop(context);
-                      showSuccessAlert(context, 'Berhasil');
-                      await saveExcelStockProductReport(fileName, productStock);
+                      if (path != null) {
+                        showSuccessAlert(context, 'Berhasil disimpan di $path');
+                      } else {
+                        showFailedAlert(context,
+                            message: 'Gagal menyimpan file');
+                      }
                     }
                   },
                   child: Container(
@@ -521,9 +557,16 @@ class CustomModals {
                       showFailedAlert(context);
                     } else {
                       clearTextFields();
+                      String? path =
+                          await saveExcelExpenseData(fileName, expenseData);
+                      if (!context.mounted) return;
                       Navigator.pop(context);
-                      showSuccessAlert(context, 'Berhasil');
-                      await saveExcelExpenseData(fileName, expenseData);
+                      if (path != null) {
+                        showSuccessAlert(context, 'Berhasil disimpan di $path');
+                      } else {
+                        showFailedAlert(context,
+                            message: 'Gagal menyimpan file');
+                      }
                     }
                   },
                   child: Container(
@@ -549,10 +592,11 @@ class CustomModals {
     );
   }
 
-  static Future<void> saveExcelExpenseData(
+  static Future<String?> saveExcelExpenseData(
       String fileName, List<Expensemodel> expenseData) async {
     if (fileName.isEmpty) {
       print('Nama file tidak boleh kosong');
+      return null;
     } else {
       // Membuat file Excel
       var excel = Excel.createExcel();
@@ -590,18 +634,21 @@ class CustomModals {
 
       List<int>? fileBytes = excel.save();
       if (fileBytes != null) {
-        // Simpan file ke direktori eksternal
-        final directory = await getExternalStorageDirectory();
-        final filePath = join(directory!.path, '$fileName.xlsx');
+        // Simpan file ke folder Download
+        Directory directory = Directory('/storage/emulated/0/Download');
+        if (!await directory.exists()) {
+          directory = await getExternalStorageDirectory() ?? Directory('/');
+        }
+        final filePath = join(directory.path, '$fileName.xlsx');
         final file = File(filePath);
 
         await file.writeAsBytes(fileBytes);
 
         print('File berhasil disimpan di $filePath');
         print('Data $expenseData.');
-        // Bagikan file menggunakan package Share_plus
-        // await Share.share(filePath);
+        return filePath;
       }
+      return null;
     }
   }
 
@@ -661,9 +708,16 @@ class CustomModals {
                       showFailedAlert(context);
                     } else {
                       clearTextFields();
+                      String? path = await saveExcelFileCashierReport(
+                          fileName, dataToExport);
+                      if (!context.mounted) return;
                       Navigator.pop(context);
-                      showSuccessAlert(context, 'Berhasil');
-                      await saveExcelFileCashierReport(fileName, dataToExport);
+                      if (path != null) {
+                        showSuccessAlert(context, 'Berhasil disimpan di $path');
+                      } else {
+                        showFailedAlert(context,
+                            message: 'Gagal menyimpan file');
+                      }
                     }
                   },
                   child: Container(
@@ -689,10 +743,11 @@ class CustomModals {
     );
   }
 
-  static Future<void> saveExcelFileCashierReport(
+  static Future<String?> saveExcelFileCashierReport(
       String fileName, List<ReportCashierData> dataToExport) async {
     if (fileName.isEmpty) {
       print('Nama file tidak boleh kosong');
+      return null;
     } else {
       // Membuat file Excel
       var excel = Excel.createExcel();
@@ -733,16 +788,21 @@ class CustomModals {
 
       List<int>? fileBytes = excel.save();
       if (fileBytes != null) {
-        // Simpan file ke direktori eksternal
-        final directory = await getExternalStorageDirectory();
-        final filePath = join(directory!.path, '$fileName.xlsx');
+        // Simpan file ke folder Download
+        Directory directory = Directory('/storage/emulated/0/Download');
+        if (!await directory.exists()) {
+          directory = await getExternalStorageDirectory() ?? Directory('/');
+        }
+        final filePath = join(directory.path, '$fileName.xlsx');
         final file = File(filePath);
 
         await file.writeAsBytes(fileBytes);
 
         print('File berhasil disimpan di $filePath');
         print('Data $dataToExport.');
+        return filePath;
       }
+      return null;
     }
   }
 
@@ -803,10 +863,16 @@ class CustomModals {
                       showFailedAlert(context);
                     } else {
                       clearTextFields();
-                      Navigator.pop(context);
-                      showSuccessAlert(context, 'Berhasil');
-                      await saveExcelReportSoldProduct(
+                      String? path = await saveExcelReportSoldProduct(
                           fileName, dataSoldProduct);
+                      if (!context.mounted) return;
+                      Navigator.pop(context);
+                      if (path != null) {
+                        showSuccessAlert(context, 'Berhasil disimpan di $path');
+                      } else {
+                        showFailedAlert(context,
+                            message: 'Gagal menyimpan file');
+                      }
                     }
                   },
                   child: Container(
@@ -832,10 +898,11 @@ class CustomModals {
     );
   }
 
-  static Future<void> saveExcelReportSoldProduct(
+  static Future<String?> saveExcelReportSoldProduct(
       String fileName, List<ReportSoldProduct> dataSoldProduct) async {
     if (fileName.isEmpty) {
       print('Nama file tidak boleh kosong');
+      return null;
     } else {
       // Membuat file Excel
       var excel = Excel.createExcel();
@@ -867,22 +934,28 @@ class CustomModals {
 
       List<int>? fileBytes = excel.save();
       if (fileBytes != null) {
-        // Simpan file ke direktori eksternal
-        final directory = await getExternalStorageDirectory();
-        final filePath = join(directory!.path, '$fileName.xlsx');
+        // Simpan file ke folder Download
+        Directory directory = Directory('/storage/emulated/0/Download');
+        if (!await directory.exists()) {
+          directory = await getExternalStorageDirectory() ?? Directory('/');
+        }
+        final filePath = join(directory.path, '$fileName.xlsx');
         final file = File(filePath);
 
         await file.writeAsBytes(fileBytes);
 
         print('File berhasil disimpan di $filePath');
         print('Data $dataSoldProduct.');
+        return filePath;
       }
+      return null;
     }
   }
 
   static Future<void> modalExportExcelDropdown(BuildContext context) async {
     final TextEditingController fileNameController = TextEditingController();
-    final TextEditingController statusController = TextEditingController();
+    final TextEditingController statusController =
+        TextEditingController(text: "Semua");
     DateTime fromDate = DateTime.now();
     DateTime toDate = DateTime.now();
 
@@ -891,7 +964,10 @@ class CustomModals {
       builder: (BuildContext context) {
         final mediaQuery = MediaQuery.of(context);
         final maxWidth = mediaQuery.size.width * 0.9;
-        final heightsdf = MediaQuery.of(context).orientation == Orientation.portrait? mediaQuery.size.height * 0.5: mediaQuery.size.height * 0.8;
+        final heightsdf =
+            MediaQuery.of(context).orientation == Orientation.portrait
+                ? mediaQuery.size.height * 0.5
+                : mediaQuery.size.height * 0.8;
 
         return Dialog(
           insetPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 24),
@@ -1058,10 +1134,17 @@ class CustomModals {
                               showFailedAlert(context);
                             } else {
                               clearTextFields();
-                              Navigator.pop(context);
-                              showSuccessAlert(context, 'Berhasil');
-                              await saveExcelFileWithDateRange(
+                              String? path = await saveExcelFileWithDateRange(
                                   fileName, status);
+                              if (!context.mounted) return;
+                              Navigator.pop(context);
+                              if (path != null) {
+                                showSuccessAlert(
+                                    context, 'Berhasil disimpan di $path');
+                              } else {
+                                showFailedAlert(context,
+                                    message: 'Gagal menyimpan file');
+                              }
                             }
                           },
                           child: Container(
@@ -1091,7 +1174,7 @@ class CustomModals {
     );
   }
 
-  static Future<void> saveExcelFileWithDateRange(
+  static Future<String?> saveExcelFileWithDateRange(
       String fileName, String status) async {
     Future<List<TransactionData>> getTransactionData() async {
       try {
@@ -1104,6 +1187,7 @@ class CustomModals {
 
     if (fileName.isEmpty) {
       debugPrint('Nama file tidak boleh kosong');
+      return null;
     } else {
       var excel = Excel.createExcel();
       var sheet = excel['Sheet1'];
@@ -1176,12 +1260,18 @@ class CustomModals {
 
       List<int>? fileBytes = excel.save();
       if (fileBytes != null) {
-        final directory = await getExternalStorageDirectory();
-        final filePath = join(directory!.path, '$fileName.xlsx');
+        // Simpan file ke folder Download
+        Directory directory = Directory('/storage/emulated/0/Download');
+        if (!await directory.exists()) {
+          directory = await getExternalStorageDirectory() ?? Directory('/');
+        }
+        final filePath = join(directory.path, '$fileName.xlsx');
         final file = File(filePath);
         await file.writeAsBytes(fileBytes);
         debugPrint('File berhasil disimpan di $filePath');
+        return filePath;
       }
+      return null;
     }
   }
 

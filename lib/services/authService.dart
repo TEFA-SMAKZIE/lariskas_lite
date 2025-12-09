@@ -126,9 +126,9 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:kas_mini_resto/constants/apiConstants.dart';
-import 'package:kas_mini_resto/providers/userProvider.dart';
-import 'package:kas_mini_resto/view/page/splash_screen.dart';
+import 'package:kas_mini_lite/constants/apiConstants.dart';
+import 'package:kas_mini_lite/providers/userProvider.dart';
+import 'package:kas_mini_lite/view/page/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 class AuthService {

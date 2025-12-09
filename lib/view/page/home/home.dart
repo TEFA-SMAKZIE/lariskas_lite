@@ -647,8 +647,8 @@ class _HomeState extends State<Home> {
                                                                   .replaceAll(
                                                                       '\n', ' ')
                                                                   .length >
-                                                              30
-                                                          ? '${settingProvider.getSettingAddress!.replaceAll('\n', ' ').substring(0, 30)}...'
+                                                              15
+                                                          ? '${settingProvider.getSettingAddress!.replaceAll('\n', ' ').substring(0, 15)}...'
                                                           : settingProvider
                                                               .getSettingAddress!
                                                               .replaceAll(

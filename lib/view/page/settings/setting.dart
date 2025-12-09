@@ -370,7 +370,7 @@ class _SettingPageState extends State<SettingPage> {
   }
 
   Future<void> _updateSettingProfile() async {
-    if (image == null) {
+    if (image == null || image!.path == noImage) {
       print("No image selected or using default image.");
       _imageController.text = "assets/products/no-image.png";
       if (image != null) {
@@ -391,6 +391,18 @@ class _SettingPageState extends State<SettingPage> {
       final savedImage = await image!.copy('${tokoDir.path}/$fileName');
       print("Image saved at: ${savedImage.path}");
       _imageController.text = savedImage.path;
+    }
+
+    if (_nameController.text.length > 15) {
+      showFailedAlert(context,
+          message: "Nama Toko Harus Kurang\n dari 16 Karakter");
+      return;
+    }
+
+    if (_addressController.text.length > 60) {
+      showFailedAlert(context,
+          message: "Alamat Harus Kurang\n dari 60 Karakter");
+      return;
     }
 
     try {
