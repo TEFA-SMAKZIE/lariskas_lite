@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/model/stock_addition.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_lite/model/stock_addition.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
 
 class StockAdditionCard extends StatefulWidget {
   const StockAdditionCard({

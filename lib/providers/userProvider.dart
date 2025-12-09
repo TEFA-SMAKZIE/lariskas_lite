@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:jwt_decode/jwt_decode.dart';
-import 'package:kas_mini_flutter_app/model/serialNumberPayload.dart';
-import 'package:kas_mini_flutter_app/model/tokenPayload.dart';
-import 'package:kas_mini_flutter_app/services/userService.dart';
+import 'package:kas_mini_lite/model/serialNumberPayload.dart';
+import 'package:kas_mini_lite/model/tokenPayload.dart';
+import 'package:kas_mini_lite/services/userService.dart';
 
 class UserProvider with ChangeNotifier {
   final _storage = FlutterSecureStorage();

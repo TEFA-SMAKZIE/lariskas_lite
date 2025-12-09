@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:kas_mini_flutter_app/providers/securityProvider.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/failedAlert.dart';
-import 'package:kas_mini_flutter_app/utils/pinModalWithAnimation.dart';
-import 'package:kas_mini_flutter_app/utils/successAlert.dart';
-import 'package:kas_mini_flutter_app/view/widget/pinModal.dart';
+import 'package:kas_mini_lite/providers/securityProvider.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/failedAlert.dart';
+import 'package:kas_mini_lite/utils/pinModalWithAnimation.dart';
+import 'package:kas_mini_lite/utils/successAlert.dart';
+import 'package:kas_mini_lite/view/widget/pinModal.dart';
 import 'package:provider/provider.dart';
 
 import 'dart:async';

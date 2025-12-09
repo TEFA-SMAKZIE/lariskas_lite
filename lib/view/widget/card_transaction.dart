@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/utils/not_enough_stock_alert.dart';
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/utils/not_enough_stock_alert.dart';
 import 'package:sizer/sizer.dart';
 
 class CardTransaction extends StatefulWidget {

@@ -6,11 +6,11 @@ import 'package:flutter/rendering.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/transaction.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveFloatingButton.dart';
+import 'package:kas_mini_lite/model/transaction.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/expensiveFloatingButton.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -505,21 +505,18 @@ class _ShareDetailTransactionState extends State<ShareDetailTransaction> {
               ),
             ),
           ),
-          Positioned(bottom: 0, left: 0, right: 0, child: _buildShareButton()),
+          Positioned(bottom: 4, left: 0, right: 0, child: _buildShareButton()),
         ],
       ),
     );
   }
 
   Widget _buildShareButton() {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10, left: 15, right: 15),
-      child: ExpensiveFloatingButton(
-        onPressed: () {
-          _captureAndShareImage();
-        },
-        text: "BAGIKAN",
-      ),
+    return ExpensiveFloatingButton(
+      onPressed: () {
+        _captureAndShareImage();
+      },
+      text: "BAGIKAN",
     );
   }
 }

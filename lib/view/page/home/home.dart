@@ -1,47 +1,47 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:kas_mini_flutter_app/view/page/login.dart';
+import 'package:kas_mini_lite/view/page/login.dart';
 import 'package:sizer/sizer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/cashier.dart';
-import 'package:kas_mini_flutter_app/model/transaction.dart';
-import 'package:kas_mini_flutter_app/providers/cashierProvider.dart';
-import 'package:kas_mini_flutter_app/providers/securityProvider.dart';
-import 'package:kas_mini_flutter_app/providers/settingProvider.dart';
-import 'package:kas_mini_flutter_app/providers/userProvider.dart';
-import 'package:kas_mini_flutter_app/services/authService.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/pinModalWithAnimation.dart';
-import 'package:kas_mini_flutter_app/utils/toast.dart';
-import 'package:kas_mini_flutter_app/view/page/History_transaksi.dart';
-import 'package:kas_mini_flutter_app/view/page/aboutapplication/applicationAbout.dart';
-import 'package:kas_mini_flutter_app/view/page/addStockProduct/add_stock_product.dart';
-import 'package:kas_mini_flutter_app/view/page/full_icon_page.dart';
-import 'package:kas_mini_flutter_app/view/page/cashier/cashier_page.dart';
-import 'package:kas_mini_flutter_app/view/page/cashier/update_cashier_from_home_page.dart';
-import 'package:kas_mini_flutter_app/view/page/change_password/changePassword.dart';
-import 'package:kas_mini_flutter_app/view/page/expense/expense_page.dart';
-import 'package:kas_mini_flutter_app/view/page/home/product_terbaru_list.dart';
-import 'package:kas_mini_flutter_app/view/page/home/riwayat_transaksi.dart';
-import 'package:kas_mini_flutter_app/view/page/income/income_page.dart';
-import 'package:kas_mini_flutter_app/view/page/login_cashier/login_cashier.dart';
-import 'package:kas_mini_flutter_app/view/page/print_resi/input_resi.dart';
-import 'package:kas_mini_flutter_app/view/page/product/product.dart';
-import 'package:kas_mini_flutter_app/view/page/report/report_page.dart';
-import 'package:kas_mini_flutter_app/view/page/settings/securityPage.dart';
-import 'package:kas_mini_flutter_app/view/page/settings/setting.dart';
-import 'package:kas_mini_flutter_app/view/page/transaction/transactions_page.dart';
-import 'package:kas_mini_flutter_app/view/page/usersProfile/usersProfile.dart';
-import 'package:kas_mini_flutter_app/view/widget/line_chart_card.dart';
-import 'package:kas_mini_flutter_app/view/widget/menu_card.dart';
-import 'package:kas_mini_flutter_app/view/widget/modals.dart';
-import 'package:kas_mini_flutter_app/view/widget/pinModal.dart';
-import 'package:kas_mini_flutter_app/view/widget/refresWidget.dart';
-import 'package:kas_mini_flutter_app/view/widget/sidebar_list_tile.dart';
+import 'package:kas_mini_lite/model/cashier.dart';
+import 'package:kas_mini_lite/model/transaction.dart';
+import 'package:kas_mini_lite/providers/cashierProvider.dart';
+import 'package:kas_mini_lite/providers/securityProvider.dart';
+import 'package:kas_mini_lite/providers/settingProvider.dart';
+import 'package:kas_mini_lite/providers/userProvider.dart';
+import 'package:kas_mini_lite/services/authService.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/pinModalWithAnimation.dart';
+import 'package:kas_mini_lite/utils/toast.dart';
+import 'package:kas_mini_lite/view/page/History_transaksi.dart';
+import 'package:kas_mini_lite/view/page/aboutapplication/applicationAbout.dart';
+import 'package:kas_mini_lite/view/page/addStockProduct/add_stock_product.dart';
+import 'package:kas_mini_lite/view/page/full_icon_page.dart';
+import 'package:kas_mini_lite/view/page/cashier/cashier_page.dart';
+import 'package:kas_mini_lite/view/page/cashier/update_cashier_from_home_page.dart';
+import 'package:kas_mini_lite/view/page/change_password/changePassword.dart';
+import 'package:kas_mini_lite/view/page/expense/expense_page.dart';
+import 'package:kas_mini_lite/view/page/home/product_terbaru_list.dart';
+import 'package:kas_mini_lite/view/page/home/riwayat_transaksi.dart';
+import 'package:kas_mini_lite/view/page/income/income_page.dart';
+import 'package:kas_mini_lite/view/page/login_cashier/login_cashier.dart';
+import 'package:kas_mini_lite/view/page/print_resi/input_resi.dart';
+import 'package:kas_mini_lite/view/page/product/product.dart';
+import 'package:kas_mini_lite/view/page/report/report_page.dart';
+import 'package:kas_mini_lite/view/page/settings/securityPage.dart';
+import 'package:kas_mini_lite/view/page/settings/setting.dart';
+import 'package:kas_mini_lite/view/page/transaction/transactions_page.dart';
+import 'package:kas_mini_lite/view/page/usersProfile/usersProfile.dart';
+import 'package:kas_mini_lite/view/widget/line_chart_card.dart';
+import 'package:kas_mini_lite/view/widget/menu_card.dart';
+import 'package:kas_mini_lite/view/widget/modals.dart';
+import 'package:kas_mini_lite/view/widget/pinModal.dart';
+import 'package:kas_mini_lite/view/widget/refresWidget.dart';
+import 'package:kas_mini_lite/view/widget/sidebar_list_tile.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
@@ -74,30 +74,30 @@ class _HomeState extends State<Home> {
     });
   }
 
-  // void _navigateToLogin() {
-  //   Future.delayed(Duration(seconds: 1), () {
-  //     // Pastikan widget masih terpasang
-  //     Navigator.pushReplacement(
-  //       context,
-  //       MaterialPageRoute(builder: (context) => LoginPage()),
-  //     );
-  //   });
-  // }
+  void _navigateToLogin() {
+    Future.delayed(Duration(seconds: 1), () {
+      // Pastikan widget masih terpasang
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => LoginPage()),
+      );
+    });
+  }
 
-  // void _checkToken() async {
-  //   try {
-  //     final token = await _authService.getToken();
-  //     if (token != null && !_authService.isTokenExpired(context, token)) {
-  //       print("Home!");
-  //     } else {
-  //       print("Navigating to Login");
-  //       _navigateToLogin();
-  //     }
-  //   } catch (e) {
-  //     print("Error checking token: $e");
-  //     _navigateToLogin(); // Fallback ke halaman login
-  //   }
-  // }
+  void _checkToken() async {
+    try {
+      final token = await _authService.getToken();
+      if (token != null && !_authService.isTokenExpired(context, token)) {
+        print("Home!");
+      } else {
+        print("Navigating to Login");
+        _navigateToLogin();
+      }
+    } catch (e) {
+      print("Error checking token: $e");
+      _navigateToLogin(); // Fallback ke halaman login
+    }
+  }
 
   void getTransaction() async {
     List<TransactionData> data = await db.getTransaction();
@@ -108,15 +108,15 @@ class _HomeState extends State<Home> {
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  // final AuthService _authService = AuthService();
+  final AuthService _authService = AuthService();
 
-  // void _logout() async {
-  //   try {
-  //     await _authService.logout(context);
-  //   } catch (e) {
-  //     print('Error during logout: $e');
-  //   }
-  // }
+  void _logout() async {
+    try {
+      await _authService.logout(context);
+    } catch (e) {
+      print('Error during logout: $e');
+    }
+  }
 
   Future<void> _handleRefresh() async {
     await Provider.of<CashierProvider>(context, listen: false)
@@ -170,17 +170,17 @@ class _HomeState extends State<Home> {
     });
   }
 
-  // @override
-  // void startTokenCheck(BuildContext context) {
-  //    final authService = AuthService();
-  //   Timer.periodic(Duration(seconds: 1), (timer) async {
-  //     final token = await authService.getToken();
-  //     if (token == null || authService.isTokenExpired(context, token)) {
-  //       timer.cancel();
-  //       await authService.logout(context);
-  //     }
-  //   });
-  // }
+  @override
+  void startTokenCheck(BuildContext context) {
+     final authService = AuthService();
+    Timer.periodic(Duration(seconds: 1), (timer) async {
+      final token = await authService.getToken();
+      if (token == null || authService.isTokenExpired(context, token)) {
+        timer.cancel();
+        await authService.logout(context);
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -431,43 +431,43 @@ class _HomeState extends State<Home> {
                               },
                             ),
 
-                            // if (cashierProvider.cashierData?['cashierName'] ==
-                            //     "Owner")
-                              // SidebarListTile(
-                              //   icon: Icons.shield_outlined,
-                              //   title: 'Keamanan',
-                              //   iconColor: Colors.white,
-                              //   onTap: () {
-                              //     showPinModalWithAnimation(
-                              //       context,
-                              //       pinModal: PinModal(
-                              //         destination: SecuritySettingsPage(),
-                              //       ),
-                              //     );
-                              //   },
-                              // ),
-                            // SidebarListTile(
-                            //   icon: Icons.password_outlined,
-                            //   title: 'Ganti Password',
-                            //   iconColor: Colors.white,
-                            //   onTap: () {
-                            //     if (securityProvider.kunciGantiPassword) {
-                            //       showPinModalWithAnimation(
-                            //         context,
-                            //         pinModal: PinModal(
-                            //           destination: ChangepasswordPage(),
-                            //         ),
-                            //       );
-                            //     } else {
-                            //       Navigator.push(
-                            //         context,
-                            //         MaterialPageRoute(
-                            //             builder: (context) =>
-                            //                 ChangepasswordPage()),
-                            //       );
-                            //     }
-                            //   },
-                            // )
+                            if (cashierProvider.cashierData?['cashierName'] ==
+                                "Owner")
+                              SidebarListTile(
+                                icon: Icons.shield_outlined,
+                                title: 'Keamanan',
+                                iconColor: Colors.white,
+                                onTap: () {
+                                  showPinModalWithAnimation(
+                                    context,
+                                    pinModal: PinModal(
+                                      destination: SecuritySettingsPage(),
+                                    ),
+                                  );
+                                },
+                              ),
+                            SidebarListTile(
+                              icon: Icons.password_outlined,
+                              title: 'Ganti Password',
+                              iconColor: Colors.white,
+                              onTap: () {
+                                if (securityProvider.kunciGantiPassword) {
+                                  showPinModalWithAnimation(
+                                    context,
+                                    pinModal: PinModal(
+                                      destination: ChangepasswordPage(),
+                                    ),
+                                  );
+                                } else {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ChangepasswordPage()),
+                                  );
+                                }
+                              },
+                            )
                           ],
                         ),
                       ),
@@ -866,30 +866,30 @@ class _HomeState extends State<Home> {
                                         imagePath: 'assets/images/product.png',
                                       ),
                                     ),
-                                    // const Gap(10),
-                                    // Expanded(
-                                    //   child: MainCard(
-                                    //     onTap: () {
-                                    //       if (securityProvider.kunciLaporan) {
-                                    //         showPinModalWithAnimation(context,
-                                    //             pinModal: PinModal(
-                                    //               destination: ReportPage(),
-                                    //             ));
-                                    //       } else {
-                                    //         Navigator.push(
-                                    //           context,
-                                    //           MaterialPageRoute(
-                                    //             builder: (context) =>
-                                    //                 const ReportPage(),
-                                    //           ),
-                                    //         );
-                                    //       }
-                                    //     },
-                                    //     title: "Laporan\n",
-                                    //     color: Colors.black,
-                                    //     imagePath: "assets/images/report.png",
-                                    //   ),
-                                    // ),
+                                    const Gap(10),
+                                    Expanded(
+                                      child: MainCard(
+                                        onTap: () {
+                                          if (securityProvider.kunciLaporan) {
+                                            showPinModalWithAnimation(context,
+                                                pinModal: PinModal(
+                                                  destination: ReportPage(),
+                                                ));
+                                          } else {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const ReportPage(),
+                                              ),
+                                            );
+                                          }
+                                        },
+                                        title: "Laporan\n",
+                                        color: Colors.black,
+                                        imagePath: "assets/images/report.png",
+                                      ),
+                                    ),
                                     Gap(10),
                                     Expanded(
                                       child: MainCard(

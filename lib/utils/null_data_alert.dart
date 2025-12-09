@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/utils/modal_animation.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/utils/modal_animation.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
 import 'package:lottie/lottie.dart';
 
 void showNullDataAlert(BuildContext context, {String? message}) {

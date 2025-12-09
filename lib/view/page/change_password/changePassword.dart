@@ -6,19 +6,19 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http; // Tambahkan ini
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
-import 'package:kas_mini_flutter_app/constants/apiConstants.dart';
-import 'package:kas_mini_flutter_app/providers/userProvider.dart';
-import 'package:kas_mini_flutter_app/utils/checkConnection.dart';
+import 'package:kas_mini_lite/constants/apiConstants.dart';
+import 'package:kas_mini_lite/providers/userProvider.dart';
+import 'package:kas_mini_lite/utils/checkConnection.dart';
 import 'dart:convert'; // Untuk JSON encoding/decoding
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/loadingAlert.dart';
-import 'package:kas_mini_flutter_app/utils/null_data_alert.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/utils/successAlert.dart';
-import 'package:kas_mini_flutter_app/utils/toast.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveFloatingButton.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/loadingAlert.dart';
+import 'package:kas_mini_lite/utils/null_data_alert.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/utils/successAlert.dart';
+import 'package:kas_mini_lite/utils/toast.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/custom_textfield.dart';
+import 'package:kas_mini_lite/view/widget/expensiveFloatingButton.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 

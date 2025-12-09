@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/icons/material_symbols.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/view/page/income/input_expense_page.dart';
-import 'package:kas_mini_flutter_app/view/widget/dateFrom-To.dart';
-import 'package:kas_mini_flutter_app/view/widget/floating_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/search.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/view/page/income/input_expense_page.dart';
+import 'package:kas_mini_lite/view/widget/dateFrom-To.dart';
+import 'package:kas_mini_lite/view/widget/floating_button.dart';
+import 'package:kas_mini_lite/view/widget/search.dart';
 
 class IncomePageEmpty extends StatefulWidget {
   const IncomePageEmpty({super.key});

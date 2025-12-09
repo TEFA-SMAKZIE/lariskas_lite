@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/providers/cashierProvider.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/confirmation_transaction.dart';
-import 'package:kas_mini_flutter_app/view/widget/modals.dart';
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/providers/cashierProvider.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/confirmation_transaction.dart';
+import 'package:kas_mini_lite/view/widget/modals.dart';
 import 'package:provider/provider.dart';
 
 class CheckoutPage extends StatelessWidget {

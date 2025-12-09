@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/view/page/addStockProduct/select_product.dart';
-import 'package:kas_mini_flutter_app/view/widget/Notfound.dart';
-import 'package:kas_mini_flutter_app/view/widget/add_product_stock_card.dart';
-import 'package:kas_mini_flutter_app/view/widget/app_bar_stock.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveFloatingButton.dart';
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/view/page/addStockProduct/select_product.dart';
+import 'package:kas_mini_lite/view/widget/Notfound.dart';
+import 'package:kas_mini_lite/view/widget/add_product_stock_card.dart';
+import 'package:kas_mini_lite/view/widget/app_bar_stock.dart';
+import 'package:kas_mini_lite/view/widget/expensiveFloatingButton.dart';
 
 class SelectAndAddStockProduct extends StatefulWidget {
   final List<Product>? selectedProductStock;

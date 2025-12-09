@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
 
 class IncomeCard extends StatefulWidget {
   final String title;

@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
 
 Future<File?> cropImage(File? image) async {
   if (image == null) return null;

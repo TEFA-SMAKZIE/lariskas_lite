@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
 
 class AddCategoryWidget extends StatefulWidget {
   final Function onCategoryAdded;

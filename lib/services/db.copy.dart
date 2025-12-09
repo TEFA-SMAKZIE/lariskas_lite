@@ -1,12 +1,12 @@
 import 'dart:io';
 import 'package:archive/archive.dart';
 import 'package:flutter/widgets.dart';
-import 'package:kas_mini_flutter_app/utils/alert.dart';
+import 'package:kas_mini_lite/utils/alert.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
+import 'package:kas_mini_lite/model/product.dart';
 
 Future<void> copyDatabaseToStorage(BuildContext context,List<Product> products) async {
   

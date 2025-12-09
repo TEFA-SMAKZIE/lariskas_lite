@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
 class CustomRefreshWidget extends StatefulWidget {

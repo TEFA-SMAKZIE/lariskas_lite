@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/model/cashier.dart';
-import 'package:kas_mini_flutter_app/services/database_service.dart';
+import 'package:kas_mini_lite/model/cashier.dart';
+import 'package:kas_mini_lite/services/database_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CashierProvider with ChangeNotifier {

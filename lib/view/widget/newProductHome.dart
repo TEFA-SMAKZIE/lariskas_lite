@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kas_mini_flutter_app/model/product.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/view/page/product/product.dart';
+import 'package:kas_mini_lite/model/product.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/view/page/product/product.dart';
 
 class NewProductHome extends StatefulWidget {
   final Widget child;

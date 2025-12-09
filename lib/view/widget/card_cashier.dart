@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:kas_mini_flutter_app/model/cashier.dart';
-import 'package:kas_mini_flutter_app/providers/cashierProvider.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/view/page/cashier/update_cashier_page.dart';
+import 'package:kas_mini_lite/model/cashier.dart';
+import 'package:kas_mini_lite/providers/cashierProvider.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/view/page/cashier/update_cashier_page.dart';
 import 'package:provider/provider.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 

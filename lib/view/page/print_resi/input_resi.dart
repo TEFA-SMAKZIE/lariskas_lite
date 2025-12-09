@@ -3,17 +3,17 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/material_symbols.dart';
-import 'package:kas_mini_flutter_app/providers/bluetoothProvider.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/null_data_alert.dart';
-import 'package:kas_mini_flutter_app/utils/printer_helper.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/page/home/home.dart';
-import 'package:kas_mini_flutter_app/view/page/print_resi/select_expedition.dart';
-import 'package:kas_mini_flutter_app/view/page/qr_code_scanner.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/custom_textfield.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveFloatingButton.dart';
+import 'package:kas_mini_lite/providers/bluetoothProvider.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/null_data_alert.dart';
+import 'package:kas_mini_lite/utils/printer_helper.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/page/home/home.dart';
+import 'package:kas_mini_lite/view/page/print_resi/select_expedition.dart';
+import 'package:kas_mini_lite/view/page/qr_code_scanner.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/custom_textfield.dart';
+import 'package:kas_mini_lite/view/widget/expensiveFloatingButton.dart';
 import 'package:provider/provider.dart';
 
 class InputResi extends StatefulWidget {

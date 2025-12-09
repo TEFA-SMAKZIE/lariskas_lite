@@ -3,16 +3,16 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/uil.dart';
-import 'package:kas_mini_flutter_app/model/cashier.dart';
-import 'package:kas_mini_flutter_app/providers/cashierProvider.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/responsif/fsize.dart';
-import 'package:kas_mini_flutter_app/view/page/cashier/add_cashier_page.dart';
-import 'package:kas_mini_flutter_app/view/widget/Notfound.dart';
-import 'package:kas_mini_flutter_app/view/widget/back_button.dart';
-import 'package:kas_mini_flutter_app/view/widget/card_cashier.dart';
-import 'package:kas_mini_flutter_app/view/widget/expensiveFloatingButton.dart';
-import 'package:kas_mini_flutter_app/view/widget/search.dart';
+import 'package:kas_mini_lite/model/cashier.dart';
+import 'package:kas_mini_lite/providers/cashierProvider.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/responsif/fsize.dart';
+import 'package:kas_mini_lite/view/page/cashier/add_cashier_page.dart';
+import 'package:kas_mini_lite/view/widget/Notfound.dart';
+import 'package:kas_mini_lite/view/widget/back_button.dart';
+import 'package:kas_mini_lite/view/widget/card_cashier.dart';
+import 'package:kas_mini_lite/view/widget/expensiveFloatingButton.dart';
+import 'package:kas_mini_lite/view/widget/search.dart';
 import 'package:provider/provider.dart';
 
 /// Halaman Manajemen Kasir

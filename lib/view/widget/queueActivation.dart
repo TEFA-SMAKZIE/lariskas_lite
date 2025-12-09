@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
-import 'package:kas_mini_flutter_app/utils/failedAlert.dart';
-import 'package:kas_mini_flutter_app/utils/toast.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
+import 'package:kas_mini_lite/utils/failedAlert.dart';
+import 'package:kas_mini_lite/utils/toast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:gap/gap.dart';
 

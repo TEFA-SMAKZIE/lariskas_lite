@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:kas_mini_flutter_app/constants/apiConstants.dart';
-import 'package:kas_mini_flutter_app/providers/userProvider.dart';
-import 'package:kas_mini_flutter_app/utils/loadingAlert.dart';
-import 'package:kas_mini_flutter_app/utils/null_data_alert.dart';
-import 'package:kas_mini_flutter_app/utils/successAlert.dart';
+import 'package:kas_mini_lite/constants/apiConstants.dart';
+import 'package:kas_mini_lite/providers/userProvider.dart';
+import 'package:kas_mini_lite/utils/loadingAlert.dart';
+import 'package:kas_mini_lite/utils/null_data_alert.dart';
+import 'package:kas_mini_lite/utils/successAlert.dart';
 import 'package:provider/provider.dart';
 
 class UserService {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/material_symbols.dart';
-import 'package:kas_mini_flutter_app/utils/colors.dart';
+import 'package:kas_mini_lite/utils/colors.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({super.key});
