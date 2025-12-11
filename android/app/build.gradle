@@ -17,7 +17,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17
+        jvmTarget = '17'
     }
 
     defaultConfig {
@@ -25,7 +25,7 @@ android {
         applicationId = "com.zielabs.lariskaslite"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdkVersion 21
+       minSdk = 21
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -47,7 +47,7 @@ android {
 dependencies { 
     // nabildzr added 
         coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
-        implementation "androidx.core:core-ktx:1.6.0"
+        implementation "androidx.core:core-ktx:1.12.0"
 }
 
 flutter {

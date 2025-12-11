@@ -1,4 +1,4 @@
-package com.example.kas_mini_lite
+package com.zielabs.lariskaslite
 
 import io.flutter.embedding.android.FlutterActivity
 

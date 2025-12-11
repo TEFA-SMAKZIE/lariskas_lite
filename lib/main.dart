@@ -10,7 +10,6 @@ import 'package:kas_mini_lite/providers/productProvider.dart';
 import 'package:kas_mini_lite/providers/securityProvider.dart';
 import 'package:kas_mini_lite/providers/settingProvider.dart';
 import 'package:kas_mini_lite/providers/userProvider.dart';
-import 'package:kas_mini_lite/view/page/home/home.dart';
 import 'package:kas_mini_lite/view/page/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
