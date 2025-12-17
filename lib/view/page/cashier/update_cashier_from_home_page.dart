@@ -168,14 +168,18 @@ class _UpdateCashierFromHomeState extends State<UpdateCashierFromHome> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                "Gambar",
-                style: TextStyle(
-
-                    fontWeight: FontWeight.w600,
-                    color: primaryColor,
-                    fontSize: 16),
+              Row(
+                children: [
+                  Text(
+                    "Gambar",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: primaryColor,
+                        fontSize: 16),
+                  ),
+                ],
               ),
+              Gap(5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -191,8 +195,7 @@ class _UpdateCashierFromHomeState extends State<UpdateCashierFromHome> {
                               fit: BoxFit.cover,
                             )
                           : DecorationImage(
-                              image: AssetImage(
-                                  'assets/products/no-image.png'),
+                              image: AssetImage('assets/products/no-image.png'),
                               fit: BoxFit.cover,
                             ),
                     ),
@@ -241,8 +244,8 @@ class _UpdateCashierFromHomeState extends State<UpdateCashierFromHome> {
                           hintText: "Masukkan Nama Kasir",
                           prefixIcon: null,
                           readOnly: true,
-                          hintStyle: TextStyle(
-                              fontSize: 17, color: Colors.grey[400]),
+                          hintStyle:
+                              TextStyle(fontSize: 17, color: Colors.grey[400]),
                           controller: nameIsOwnerController,
                           maxLines: 1,
                           enabled: widget.cashier.cashierName != 'Owner',
@@ -253,8 +256,8 @@ class _UpdateCashierFromHomeState extends State<UpdateCashierFromHome> {
                           fillColor: Colors.grey[200],
                           hintText: "Masukkan Nama Kasir",
                           prefixIcon: null,
-                          hintStyle: TextStyle(
-                              fontSize: 17, color: Colors.grey[400]),
+                          hintStyle:
+                              TextStyle(fontSize: 17, color: Colors.grey[400]),
                           controller: nameController,
                           maxLines: 1,
                           enabled: widget.cashier.cashierName != 'Owner',
@@ -278,37 +281,36 @@ class _UpdateCashierFromHomeState extends State<UpdateCashierFromHome> {
                     hintText: "Masukkan Nomor Handphone",
                     prefixIcon: null,
                     controller: phoneController,
-                    hintStyle:
-                        TextStyle(fontSize: 17, color: Colors.grey[400]),
+                    hintStyle: TextStyle(fontSize: 17, color: Colors.grey[400]),
                     maxLines: 1,
                     keyboardType: TextInputType.number,
                     suffixIcon: null,
                   ),
                   Gap(15),
-                  Row(
-                    children: const [
-                      Text(
-                        "PIN",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: primaryColor,
-                            fontSize: 16),
-                      ),
-                    ],
-                  ),
+                  Row(children: [
+                    Text(
+                      "PIN",
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: primaryColor,
+                          fontSize: 16),
+                    ),
+                  ]),
                   PinInputWidget(
                     controllers: pinController,
                   ),
                 ],
               ),
+
+              Gap(20),
+
+              // Button dengan isPositioned: true agar tidak error
+              ExpensiveFloatingButton(
+                  isPositioned: true, onPressed: _updateCashier),
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: ExpensiveFloatingButton(
-            left: 12, right: 12, onPressed: _updateCashier),
       ),
     );
   }

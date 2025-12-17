@@ -446,28 +446,28 @@ class _HomeState extends State<Home> {
                                   );
                                 },
                               ),
-                            SidebarListTile(
-                              icon: Icons.password_outlined,
-                              title: 'Ganti Password',
-                              iconColor: Colors.white,
-                              onTap: () {
-                                if (securityProvider.kunciGantiPassword) {
-                                  showPinModalWithAnimation(
-                                    context,
-                                    pinModal: PinModal(
-                                      destination: ChangepasswordPage(),
-                                    ),
-                                  );
-                                } else {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            ChangepasswordPage()),
-                                  );
-                                }
-                              },
-                            )
+                            // SidebarListTile(
+                            //   icon: Icons.password_outlined,
+                            //   title: 'Ganti Password',
+                            //   iconColor: Colors.white,
+                            //   onTap: () {
+                            //     if (securityProvider.kunciGantiPassword) {
+                            //       showPinModalWithAnimation(
+                            //         context,
+                            //         pinModal: PinModal(
+                            //           destination: ChangepasswordPage(),
+                            //         ),
+                            //       );
+                            //     } else {
+                            //       Navigator.push(
+                            //         context,
+                            //         MaterialPageRoute(
+                            //             builder: (context) =>
+                            //                 ChangepasswordPage()),
+                            //       );
+                            //     }
+                            //   },
+                            // )
                           ],
                         ),
                       ),
@@ -495,21 +495,21 @@ class _HomeState extends State<Home> {
                                       builder: (context) => UpdatePage()));
                             },
                           ),
-                          if (!securityProvider.sembunyikanLogout)
-                            ListTile(
-                              leading: const Icon(Icons.logout_outlined,
-                                  color: Colors.white),
-                              title: const Text(
-                                'Logout',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              // onTap: _logout,
-                              onTap: () {},
-                            ),
+                          // if (!securityProvider.sembunyikanLogout)
+                          //   ListTile(
+                          //     leading: const Icon(Icons.logout_outlined,
+                          //         color: Colors.white),
+                          //     title: const Text(
+                          //       'Logout',
+                          //       style: TextStyle(
+                          //         color: Colors.white,
+                          //         fontSize: 16,
+                          //         fontWeight: FontWeight.bold,
+                          //       ),
+                          //     ),
+                          //     // onTap: _logout,
+                          //     onTap: () {},
+                          //   ),
                         ],
                       ),
                     ),
