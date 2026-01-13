@@ -88,7 +88,6 @@ class _AddCashierPageState extends State<AddCashierPage> {
     try {
       final result = await _databaseService.insertCashier(cashierData);
 
-      
       var cashierProvider =
           Provider.of<CashierProvider>(context, listen: false);
 
@@ -100,13 +99,14 @@ class _AddCashierPageState extends State<AddCashierPage> {
     } catch (e, stackTrace) {
       print('Error: ${e.toString().replaceFirst('Exception: ', '')}');
       print('StackTrace: $stackTrace');
-      showNullDataAlert(context, message: '${e.toString().replaceFirst('Exception: ', '')}');
+      showNullDataAlert(context,
+          message: '${e.toString().replaceFirst('Exception: ', '')}');
       return;
     }
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => CashierPage()),
-    ) ;
+    );
   }
 
   @override
@@ -160,6 +160,7 @@ class _AddCashierPageState extends State<AddCashierPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(
           'TAMBAH KASIR',
