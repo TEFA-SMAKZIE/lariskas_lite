@@ -370,55 +370,45 @@ class _SettingPageState extends State<SettingPage> {
   }
 
   Future<void> _updateSettingProfile() async {
-    if (image == null || image!.path == noImage) {
-      print("No image selected or using default image.");
-      _imageController.text = "assets/products/no-image.png";
-      if (image != null) {
-        print('image updated: ${image}');
-      } else {
-        print('No image selected.');
-      }
-    } else {
+    String finalImagePath = noImage;
+
+    if (image == null) {
+      // User explicitly removed image or no image exists
+      finalImagePath = noImage;
+      print("No image - using default placeholder");
+    } else if (isSelectingImage) {
+      // User picked a NEW image, need to save it
       final directory = await getExternalStorageDirectory();
       final tokoDir = Directory('${directory!.path}/toko');
-      print("path: ${tokoDir.path}");
+
       if (!await tokoDir.exists()) {
-        print("Creating directory at: ${tokoDir.path}");
         await tokoDir.create(recursive: true);
       }
 
       final fileName = '${DateTime.now().millisecondsSinceEpoch}.png';
       final savedImage = await image!.copy('${tokoDir.path}/$fileName');
-      print("Image saved at: ${savedImage.path}");
-      _imageController.text = savedImage.path;
-    }
-
-    if (_nameController.text.length > 15) {
-      showFailedAlert(context,
-          message: "Nama Toko Harus Kurang\n dari 16 Karakter");
-      return;
-    }
-
-    if (_addressController.text.length > 60) {
-      showFailedAlert(context,
-          message: "Alamat Harus Kurang\n dari 60 Karakter");
-      return;
+      finalImagePath = savedImage.path;
+      print("New image saved at: $finalImagePath");
+    } else {
+      // User didn't pick a new image, use the existing one
+      finalImagePath = currentImage ?? noImage;
+      print("Using existing image: $finalImagePath");
     }
 
     try {
-      await _databaseService.updateSettingProfile(
-          _nameController.text,
-          _addressController.text,
-          _footerController.text,
-          _imageController.text);
+      await _databaseService.updateSettingProfile(_nameController.text,
+          _addressController.text, _footerController.text, finalImagePath);
 
-      isSelectingImage = false;
+      setState(() {
+        isSelectingImage = false;
+        currentImage = finalImagePath;
+      });
 
       showSuccessAlert(context, "Berhasil Memperbaharui Pengaturan Toko");
     } catch (e) {
+      print("Update error: $e");
       showFailedAlert(context,
           message: "Ada kesalahan, silahkan hubungi Admin!.");
-      return;
     }
   }
 
