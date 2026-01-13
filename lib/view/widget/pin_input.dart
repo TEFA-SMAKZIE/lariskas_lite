@@ -38,11 +38,13 @@ class _PinInputWidgetState extends State<PinInputWidget> {
   }
 
   @override
-
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-                _focusNodes.first.requestFocus();
-              });
+      if (_focusNodes.first.canRequestFocus) {
+        _focusNodes.first.requestFocus();
+      }
+    });
+
     return SizedBox(
       height: 60,
       child: Row(
@@ -58,11 +60,13 @@ class _PinInputWidgetState extends State<PinInputWidget> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: RawKeyboardListener(
-                focusNode: FocusNode(),
+                focusNode: focusNode,
                 onKey: (RawKeyEvent event) {
-                  if (event is RawKeyDownEvent &&
-                      event.logicalKey == LogicalKeyboardKey.backspace) {
-                    _handleBackspace(index);
+                  if (event.isKeyPressed(LogicalKeyboardKey.backspace) &&
+                      controller.text.isEmpty &&
+                      index > 0) {
+                    widget.controllers[index - 1].clear();
+                    _focusNodes[index - 1].requestFocus();
                   }
                 },
                 child: TextField(
@@ -70,31 +74,48 @@ class _PinInputWidgetState extends State<PinInputWidget> {
                   focusNode: focusNode,
                   textAlign: TextAlign.center,
                   keyboardType: TextInputType.number,
+                  maxLength: 1,
                   inputFormatters: [
                     FilteringTextInputFormatter.digitsOnly,
-                    LengthLimitingTextInputFormatter(1),
                   ],
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
                   decoration: InputDecoration(
+                    counterText: '',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
-                      borderSide: BorderSide.none,
+                      borderSide: const BorderSide(
+                        color: Colors.grey,
+                        width: 1.5,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(
+                        color: Colors.grey,
+                        width: 1.5,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(
+                        color: Colors.blue,
+                        width: 2,
+                      ),
                     ),
                     filled: true,
-                    fillColor: Colors.grey[200],
+                    fillColor: const Color(0xFFF5F5F5),
+                    contentPadding: EdgeInsets.zero,
                   ),
                   onChanged: (value) {
-                    if (value.length == widget.controllers.length) {
-                      // if user paste 6 digit
-                      for (int i = 0; i < widget.controllers.length; i++) {
-                        widget.controllers[i].text = value[i];
-                      }
-                      _focusNodes.last.requestFocus();
-                      return;
-                    }
-
-                    if (value.length == 1 &&
+                    if (value.isNotEmpty &&
                         index < widget.controllers.length - 1) {
-                      _focusNodes[index + 1].requestFocus();
+                      Future.delayed(const Duration(milliseconds: 50), () {
+                        _focusNodes[index + 1].requestFocus();
+                      });
                     }
                   },
                 ),
