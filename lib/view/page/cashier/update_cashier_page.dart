@@ -287,11 +287,8 @@ class _UpdateCashierPageState extends State<UpdateCashierPage> {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: ExpensiveFloatingButton(
-            left: 12, right: 12, onPressed: _updateCashier),
-      ),
+      bottomNavigationBar: ExpensiveFloatingButton(
+          left: 12, right: 12, onPressed: _updateCashier),
     );
   }
 }

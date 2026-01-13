@@ -232,31 +232,28 @@ class _ChangepasswordPageState extends State<ChangepasswordPage> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: ExpensiveFloatingButton(
-                  child: _isLoading == true
-                      ? Lottie.asset(
-                          'assets/lottie/loading-2.json',
-                          width: 100,
-                          height: 100,
-                        )
-                      : Text(
-                          "SIMPAN",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              fontSize:
-                                  SizeHelper.Fsize_expensiveFloatingButton(
-                                      context)),
-                        ),
-                  onPressed: () async {
-                    _changePassword(
-                        userProvider.serialNumberData?.serialNumberId ?? '');
-                  },
-                ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: ExpensiveFloatingButton(
+                child: _isLoading == true
+                    ? Lottie.asset(
+                        'assets/lottie/loading-2.json',
+                        width: 100,
+                        height: 100,
+                      )
+                    : Text(
+                        "SIMPAN",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize:
+                                SizeHelper.Fsize_expensiveFloatingButton(
+                                    context)),
+                      ),
+                onPressed: () async {
+                  _changePassword(
+                      userProvider.serialNumberData?.serialNumberId ?? '');
+                },
               ),
             ),
           ],
